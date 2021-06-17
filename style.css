@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --neutral-color: #eee;
+  --correct-color: #0d2;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(11, 0, 190);
+  background: linear-gradient(
+    90deg,
+    rgba(11, 0, 190, 1) 0%,
+    rgba(141, 141, 231, 1) 0%,
+    rgba(0, 212, 255, 1) 78%
+  );
+}
+
+body .title {
+  color: var(--neutral-color);
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 3;
+  font-size: 60px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: rgb(30, 90, 150);
+  box-shadow: 0 0 7px 2px;
+}
+
+.container .resetShadow {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container .resetShadow.active {
+  display: flex;
+}
+
+.container .resetShadow h2 {
+  font-size: 32px;
+  color: var(--neutral-color);
+}
+
+.container .resetShadow button {
+  border: none;
+  font-size: 20px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  color: var(--neutral-color);
+}
+
+.container .resetShadow button:hover {
+  cursor: pointer;
+}
+
+.container .resetShadow .restartGame {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.container .resetShadow .stillPlay {
+  background-color: rgba(0, 255, 0, 0.8);
+}
+
+.container .finishGame {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: var(--neutral-color);
+  background-color: rgb(30, 90, 150);
+}
+
+.container .finishGame.active {
+  display: flex;
+}
+
+.container .finishGame h2 {
+  font-size: 30px;
+}
+
+.container .finishGame p {
+  text-align: center;
+}
+
+.container .finishGame .playAgain {
+  font-size: 30px;
+  border: none;
+  background-color: rgb(91, 230, 235);
+  padding: 6px 30px;
+  border-radius: 5px;
+}
+
+.container .finishGame .playAgain:hover {
+  cursor: pointer;
+  background-color: rgb(109, 191, 194);
+}
+
+.container .question-container {
+  display: none;
+  width: 100%;
+  height: 100px;
+  font-size: 28px;
+}
+
+.container .question-container.unhide {
+  display: block;
+}
+
+.container .question-container p {
+  color: #eee;
+  padding: 8px 30px;
+}
+
+.container .answer-container {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 300px;
+}
+
+.container .answer-container.unhide {
+  display: flex;
+}
+
+.container .answer-container .btn {
+  border: none;
+  font-size: 28px;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.container .answer-container .btn:hover {
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+.container .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.container .buttons.unhide {
+  justify-content: space-evenly;
+}
+
+.container .buttons button {
+  font-size: 32px;
+  border: 2px solid black;
+  padding: 8px 40px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #eee;
+}
+
+.container .buttons button:hover {
+  background-color: rgb(0, 66, 133);
+  color: var(--neutral-color);
+  cursor: pointer;
+  border: 2px solid var(--neutral-color);
+}
